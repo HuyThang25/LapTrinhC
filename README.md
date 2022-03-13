@@ -1,2 +1,0 @@
-# lapTrinhC
-đề thi
