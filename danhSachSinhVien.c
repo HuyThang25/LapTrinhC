@@ -135,6 +135,23 @@ void xoaDanhSach(List* l){
     }
     init(l);
 }
+void readFromFile(char tenFile[], List* l){
+    FILE* f= fopen(tenFile,"rb");
+    Data data;
+    while (!feof(f)){
+        if (fread(&data,sizeof(data),1,f)!=0){
+            themNodeVaoCuoi(l,taoNode(data));
+        }
+    }
+    fclose(f);
+}
+void saveToFile(char tenFile[], List* l){
+    FILE*f= fopen(tenFile,"wr");
+    for (Node* i=l->pHead; i!=NULL; i=i->next){
+        fwrite(&i->data,sizeof(Data),1,f);
+    }
+    fclose(f);
+}
 void hienThiMenu(){
     printf("\t\tMENU\n");
     printf("1. Tao danh sach sinh vien.\n");
