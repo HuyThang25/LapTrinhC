@@ -146,7 +146,7 @@ void readFromFile(char tenFile[], List* l){
     fclose(f);
 }
 void saveToFile(char tenFile[], List* l){
-    FILE*f= fopen(tenFile,"wr");
+    FILE*f= fopen(tenFile,"wb");
     for (Node* i=l->pHead; i!=NULL; i=i->next){
         fwrite(&i->data,sizeof(Data),1,f);
     }
