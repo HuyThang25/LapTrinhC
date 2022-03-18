@@ -140,7 +140,7 @@ void readFromFile(char tenFile[], List* l){
     Data data;
     while (!feof(f)){
         if (fread(&data,sizeof(data),1,f)!=0){
-            themNodeVaoCuoi(l,taoNode(data));
+            themVaoCuoi(l,taoNode(data));
         }
     }
     fclose(f);
