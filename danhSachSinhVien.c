@@ -173,8 +173,8 @@ int main(){
         switch(chon){
             case 1:{
                 xoaDanhSach(&l);
+                int stt=1;
                 while(1){
-                    int stt=1;
                     printf("\tNhap thong tin sinh vien thu %d\n",stt); stt++;
                     themVaoCuoi(&l,taoNode(nhapData()));
                     printf("Nhap tiep bam nut bat ky, dung bam N: ");
