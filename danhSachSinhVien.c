@@ -139,7 +139,7 @@ void readFromFile(char tenFile[], List* l){
     FILE* f= fopen(tenFile,"rb");
     Data data;
     while (!feof(f)){
-        if (fread(&data,sizeof(data),1,f)!=0){
+        if (fread(&data,sizeof(Data),1,f)!=0){
             themVaoCuoi(l,taoNode(data));
         }
     }
